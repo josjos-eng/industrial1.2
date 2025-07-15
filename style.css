@@ -1,90 +1,86 @@
+:root {
+    --primary: #3498db;
+    --secondary: #2c3e50;
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --info: #1abc9c;
+    --light: #ecf0f1;
+    --dark: #34495e;
+    --gray: #95a5a6;
+    --unregistered: #9b59b6;
+    --border-radius: 10px;
+    --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background-color: #f4f4f9;
-  color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.hidden {
-  display: none;
-}
-
-#login-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #e6f0ff;
-  text-align: center;
-}
-
-#login-screen input {
-  padding: 10px;
-  width: 250px;
-  margin: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-#login-screen button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-  background-color: #ffffff;
-  padding: 15px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: linear-gradient(to right, var(--secondary), var(--primary));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 .user-info {
-  font-size: 0.9em;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-#curriculum-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.user-info i {
+    font-size: 1.5rem;
 }
 
-.semester {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+.page {
+    display: none;
+    padding: 20px;
+    flex-grow: 1;
 }
 
-.semester h3 {
-  margin-top: 0;
-  color: #0056b3;
+.active-page {
+    display: flex;
+    flex-direction: column;
 }
 
-.subject {
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.state-approved {
-  background-color: #d4edda;
-  color: #155724;
-}
-.state-delayed {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-.state-pending {
-  background-color: #d6dce5;
-  color: #333;
-}
+/* Estilos adicionales para formularios, cursos, detalles, etc. (ver archivo original) */
